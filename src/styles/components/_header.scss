@@ -1,0 +1,41 @@
+header {
+  height: 70px;
+  width: 100vw;
+  background-color: $blue;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 160;
+  padding: 0 30px;
+
+  .gatsby-image-wrapper {
+    height: 35px;
+    width: 77px;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    z-index: 150;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+    .line {
+      width: 40px;
+      height: 2px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+  }
+  .header-nav {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0 15px;
+    }
+  }
+}

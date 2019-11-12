@@ -1,42 +1,32 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, {useState} from 'react'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import { Link } from 'gatsby'
+import Logo from './logo'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = ({ parentCallback }) => {
+  const [isOpen, changeState] = useState(false);
+  
 
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <header>
+      <Link to="/"><Logo /></Link>
+      <nav className="header-nav">
+        <span><Link to="/">Home</Link></span>
+        <span><Link to="/menu">Menus</Link></span>
+        <span><Link to="/functions">Functions</Link></span>
+        <span><Link to="/contact">Contact</Link></span>
+      </nav>
+      <div className="hamburger" onClick={(() => {
+        let newValue = !isOpen
+        changeState(!isOpen);
+        parentCallback(newValue);
+      })}>
+        <span className="line line1"></span>
+        <span className="line line2"></span>
+        <span className="line line3"></span>
+      </div>
+    </header>
+  )
 }
 
 export default Header

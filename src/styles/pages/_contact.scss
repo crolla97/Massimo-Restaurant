@@ -1,0 +1,33 @@
+.contactContainer {
+  padding-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey;
+  @media screen and (min-width:1024px) {
+    flex-direction: row-reverse;
+  }
+
+  section {
+    padding: 0 40px 80px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width:1024px) {
+      width: 50%;
+    }
+    .table {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        list-style-type: none;
+      }
+    }
+    h1 {
+      padding-top: 60px;
+    }
+    span {
+      padding-top: 5px;
+    }
+  }
+}

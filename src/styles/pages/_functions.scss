@@ -1,0 +1,138 @@
+.landing-functions {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+
+  .gatsby-image-wrapper {
+    
+    div {
+      height: 100vh;
+    }
+  }
+  .imageOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.157);
+  }
+  span {
+    position: absolute;
+    z-index: 10;
+    font-size: $xl-size;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    border: 3px solid white;
+    width: 75%;
+    padding: 0;
+  }
+}
+
+.functionsContainer {
+
+  .card-main {
+    padding: 40px;
+    text-align: center;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #EFEFEF;
+    align-items: center;
+
+    p {
+      font-size: $m-size;
+      line-height: 26px;
+    }
+    span {
+      color: black;
+      border: 2px solid #000;
+      padding: 10px 70px;
+      font-size: $ms-size;
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 0;
+  max-width: 800px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    input {
+      border-image: none;
+    }
+    textarea {
+      border-image: none;
+    }
+  }
+  button {
+    text-decoration: none;
+    border: unset;
+    background-color: unset;
+    border: 1px solid rgb(124, 124, 124);
+    margin: 20px 0;
+    padding: 5px 0;    
+    width: 200px;
+  }
+  .clear {
+    text-decoration: none;
+    border: unset;
+    background-color: unset;
+    border: 1px solid rgb(124, 124, 124);
+    margin-top: 20px;
+    padding: 5px 0;
+    width: 200px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+
+  span:first-child {
+    font-size: $l-size;
+    padding-bottom: 10px;
+  }
+  span {
+    font-size: 22px;
+  }
+}
+
+/****************
+* MEDIA QUERIES *
+****************/
+
+// Display: Laptop
+
+@media screen and (min-width: 1024px) {
+  .landing-functions {
+    span {
+      width: unset;
+      padding: 10px 30px;
+      font-size: $xxl-size;
+    }
+  }
+  .functionsContainer {
+    .functions {
+      display: flex;
+      flex-direction: row;
+      div {
+        width: 50%;
+      }
+      .gatsby-image-wrapper {
+        width: 50%;
+      }
+    }
+  }
+}

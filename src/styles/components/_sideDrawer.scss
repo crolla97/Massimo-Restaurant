@@ -1,0 +1,39 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: $blue;
+  color: #fff;
+  z-index: 140;
+  position: fixed;
+  transform: translateY(-100%);
+  transition: 0.8s;
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding-top: 160px;
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: $xl-size;
+    };
+  }
+  div {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+.open {
+  transform: translateY(0);
+}
