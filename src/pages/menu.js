@@ -18,7 +18,7 @@ const MenuPage = (props) => {
         <section className="menu">
           <div className="card card-main card-main1">
             <h1>Food</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            <p>We are able to cater and adapt to any intolerances and dietary requirements</p>
             <a href="#">Main Menu</a>
             <a href="#">Lunch Menu</a>
             <a href="#">Takeaway Menu</a>
@@ -28,7 +28,7 @@ const MenuPage = (props) => {
         <section className="menu">
           <div className="card card-main card-main2">
             <h1>Bar</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            <p>Whet your whistle from the lists below</p>
             <a href="#">Bar Menu</a>
             <a href="#">Cocktail Menu</a>
           </div>

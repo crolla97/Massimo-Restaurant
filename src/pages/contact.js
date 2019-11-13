@@ -13,7 +13,7 @@ const ContactPage = () => (
         <span>0141 942 311</span>
         <span>bearsden@massimo-restaurants.com</span>
         <h1>Address</h1>
-        <span>5 Kirk Rd, Bearsden, Glasgow</span>
+        <span>3/5 Kirk Rd, Bearsden, Glasgow</span>
         <span>Short stay car park at the end of Kirk Road</span>
         <h1>Opening Times</h1>
         <div className="table">

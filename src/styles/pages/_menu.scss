@@ -26,21 +26,37 @@
 }
 
 .menu {
+  overflow: hidden;
+  max-height: 750px;
   .card {
     width: 100%;
   }
   .card-main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 60px 40px;
     background-color: #EFEFEF;
     h1 {
-
+      @media screen and (min-width: 1024px) {
+        font-size: 44px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: 50px;
+      }
     }
     p {
-      font-size: $ms-size;
+      font-size: $m-size;
       line-height: 26px;
-      margin: 20px 0;
+      @media screen and (min-width: 1024px) {
+        font-size: $mm-size;
+        line-height: 30px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: $ml-size;
+        line-height: 34px;
+        padding: 50px 0;
+      }
     }
     a {
       text-decoration: none;
@@ -49,6 +65,12 @@
       margin-top: 12px;
       border: 1px solid #000;
       box-shadow: 2.5px 5px;
+      @media screen and (min-width: 1024px) {
+        font-size: $mm-size;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: $ml-size;
+      }
     }
   }
   .card-main1 {

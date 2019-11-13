@@ -3,12 +3,11 @@
   text-align: center;
   height: 100vh;
   overflow: hidden;
-
+  
   .gatsby-image-wrapper {
-    
-    div {
-      height: 100vh;
-    }
+    object-fit: cover;
+    object-position: center center;
+    height: 100vh;
   }
   .imageOverlay{
     position: absolute;
@@ -33,28 +32,45 @@
   }
 }
 
-.functionsContainer {
+.functions {
 
   .card-main {
     padding: 40px;
     text-align: center;
-    height: 480px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background-color: #EFEFEF;
     align-items: center;
-
     p {
       font-size: $m-size;
       line-height: 26px;
+      max-width: 450px;
+      @media screen and (min-width: 1024px) {
+        font-size: $mm-size;
+        line-height: 30px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: $ml-size;
+        line-height: 34px;
+      }
     }
     span {
       color: black;
       border: 2px solid #000;
       padding: 10px 70px;
       font-size: $ms-size;
+      @media screen and (min-width: 1024px) {
+        font-size: $mm-size;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: $ml-size;
+      }
     }
+  }
+  .gatsby-image-wrapper {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -68,21 +84,37 @@ form {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
+    font-size: $ml-size;
     input {
       border-image: none;
+      font-size: $ms-size;
+    }
+    p {
+      color: $red;
+      // padding: 10px 0;
+      font-size: $mm-size;
     }
     textarea {
       border-image: none;
+      font-size: $m-size;
     }
   }
   button {
     text-decoration: none;
     border: unset;
     background-color: unset;
-    border: 1px solid rgb(124, 124, 124);
-    margin: 20px 0;
-    padding: 5px 0;    
+    border: 2px solid #000;
+    box-shadow: 2.5px 5px;
+    padding: 15px 0;
+    margin: 20px 0;  
     width: 200px;
+    @media screen and (min-width: 1024px){
+      width: 300px
+    }
+  }
+  button:active {
+    box-shadow: 2px 3px;
+    transform: translateY(3px) translateX(2px);
   }
   .clear {
     text-decoration: none;
@@ -127,11 +159,21 @@ form {
     .functions {
       display: flex;
       flex-direction: row;
-      div {
+      align-items: center;
+      overflow: hidden;
+      height: 100%;
+      max-height: 750px;
+      background-color: $grey;
+      .card {
         width: 50%;
+        height: 500px;
+        @media screen and (min-width: 1824px) {
+          height: 700px;
+        }
       }
-      .gatsby-image-wrapper {
-        width: 50%;
+      .card-img {
+        object-fit: cover;
+        overflow: hidden;
       }
     }
   }

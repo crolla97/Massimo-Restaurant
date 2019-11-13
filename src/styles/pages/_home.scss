@@ -6,10 +6,9 @@
 
   .landingPic {
     .gatsby-image-wrapper {
-
-      div {
-        height: 100vh;
-      }
+      object-fit: cover;
+      object-position: center center;
+      height: 100vh;
     }
   }
   .logoOverlay {
@@ -42,7 +41,7 @@
     justify-content: center;
 
     .line {
-      width: 23px;
+      width: 26px;
       height: 4px;
     }
     .line1 {
@@ -58,6 +57,27 @@
 
   h1 {
     color: $red;
+    font-weight: 300;
+    @media screen and (min-width: 1024px) {
+      font-size: 44px;
+    }
+    @media screen and (min-width: 1824px) {
+      font-size: 50px;
+
+    }
+  }
+  p {
+    font-size: $m-size;
+    line-height: 26px;
+    max-width: 450px;
+    @media screen and (min-width: 1024px) {
+      font-size: $mm-size;
+      line-height: 30px;
+    }
+    @media screen and (min-width: 1824px) {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
 }
 
@@ -89,10 +109,28 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
+    h1 {
+      @media screen and (min-width: 1024px) {
+        font-size: 44px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: 50px;
+  
+      }
+    }
     p {
       font-size: $m-size;
       line-height: 26px;
       padding: 20px 0;
+      @media screen and (min-width: 1024px) {
+        font-size: $mm-size;
+        line-height: 30px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: $ml-size;
+        line-height: 34px;
+        padding: 50px 0;
+      }
     }
     a {
       color: black;
@@ -116,6 +154,9 @@
   object-fit: cover;
   overflow: hidden;
   position: relative;
+  @media screen and (min-width: 1824px){
+    height: 600px
+  }
 
   .gatsby-image-wrapper {
 
@@ -144,12 +185,15 @@
     align-items: center;
     height: 100%;
     text-align: center;
-    span {
-      font-family: Playfair Display;
-      font-size: 40px;
-      font-weight: 400;
+    h1 {
       color: #fff;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
+      @media screen and (min-width: 1024px) {
+        font-size: 44px;
+      }
+      @media screen and (min-width: 1824px) {
+        font-size: 50px;
+      }
     }
     a {
       text-decoration: none;
@@ -186,25 +230,20 @@
     height: 100%;
     align-items: center;
     overflow: hidden;
-    max-height: 600px;
+    max-height: 750px;
 
     .card {
       width: 50%;
     }
     .card-main {
       padding: 0;
-      p {
-        font-size: $ms-size;
-        line-height: 26px;
-        padding: 20px 0;
-      }
       a {
         color: black;
         text-decoration: none;
         border: 2px solid #000;
         box-shadow: 4px 6px;
         padding: 10px 80px;
-        font-size: $ms-size;
+        font-size: $mm-size;
         transition: 0.1s;
       }
       a:active {
@@ -216,21 +255,16 @@
       height: 100%;
     }
   }
-  .home-1 {
-  }
   .home-2 {
     flex-direction: row-reverse;
     .card-img {
       display: block;
     }
   }
-  .home-3 {
-
-  }
   .home-4 {
     flex-direction: row-reverse;
   }
   .text-block {
-    max-width: 350px;
+    max-width: 450px;
   }
 }

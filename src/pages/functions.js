@@ -1,11 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import useForm from 'react-hook-form';
 import Img from 'gatsby-image';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const FunctionsPage = (props) => {
+  const [form, changeValue] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+  const { register, handleSubmit, reset, errors } = useForm();
+  const onSubmit = (data, e) => {
+    if (errors !== undefined) {
+      alert('Success');
+      e.target.reset();
+    }
+  };
   
   return (
     <Layout>
@@ -22,31 +36,50 @@ const FunctionsPage = (props) => {
             <p>Celebrate those important milestones and occasions in our restaurant. Christenings, Private Parties, Engagements, Baby Showers and much more, we host and can arrange a bespoke function or celebration that will be truly memorable.</p>
             <span>ENQUIRE BELOW</span>
           </div>
-          <Img fluid={props.data.celebration.childImageSharp.fluid} />
+          <div className="card card-img">
+            <Img fluid={props.data.celebration.childImageSharp.fluid} />
+          </div>
         </section>
         <section className="form">
-          <span>Call or fill out our function enquiry form</span>
+          <span>Call or fill out our enquiry form</span>
           <span>0141 942 3111</span>
-          <form method="post" action="#" onSubmit={(e) => {
-            e.preventDefault()
-          }}>
+          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit(onSubmit)}>
+            <input type="hidden" name="bot-field" />
             <label>
               Your Name
-              <input type="text" name="name" id="name" />
+              <input
+                type="text"
+                name="Name"
+                ref={register({required: true, maxLength: 80})}
+              />
+              {errors.Name && <p>This is required</p>}
             </label>
             <label>
               Your Email
-              <input type="email" name="email" id="email" />
+              <input
+                type="text"
+                name="Email"
+                ref={register({required: true, pattern: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i})}
+              />
+              {errors.Email && <p>Invalid Email</p>}
             </label>
             <label>
               Phone
-              <input type="text" name="subject" id="subject" />
+              <input
+                type="tel" 
+                name="Mobile"
+                ref={register({required: true, minLength: 6, maxLength: 12})}
+              />
+              {errors.Mobile && <p>This is required</p>}
             </label>
             <label>
               Message
-              <textarea name="message" id="message" rows="5" />
+              <textarea
+                name="Message"
+                ref={register({required: true})}
+              />
+              {errors.Message && <p>This is required</p>}
             </label>
-            <input type="reset" value="CLEAR" className="clear"/>
             <button type="submit">SEND MESSAGE</button>
           </form>
         </section>

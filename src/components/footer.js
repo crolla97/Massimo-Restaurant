@@ -15,14 +15,12 @@ const Footer = () => {
           <h3>Opening Times</h3>
           <div className="table">
             <ul className="days">
-              <li>Mon-Thur</li>
-              <li>Fri-Sat</li>
+              <li>Mon-Sat</li>
               <li>Sun</li>
             </ul>
             <ul className="hours">
-              <li>12:00-11:00</li>
-              <li>12:00-00:00</li>
-              <li>12:00-10:00</li>
+              <li>10:30-00:00</li>
+              <li>16:30-22:00</li>
             </ul>
           </div>
         </div>
@@ -32,7 +30,9 @@ const Footer = () => {
           <span>bearsden@massimo-restaurants.com</span>
         </div>
       </div>
-      Website by Crolla Creations
+      <div className="creator">
+        Website by <a href="https://www.crollacreations.com/">Crolla Creations</a>
+      </div>
     </footer>
   )
 }

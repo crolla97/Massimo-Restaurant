@@ -8,10 +8,17 @@ header {
   justify-content: space-between;
   z-index: 160;
   padding: 0 30px;
+  @media screen and (min-width:1824px){
+    height: 80px
+  }
 
   .gatsby-image-wrapper {
     height: 35px;
     width: 77px;
+    @media screen and (min-width: 1024px) {
+      height: 55px;
+      width: 121px;
+    }
   }
   .hamburger {
     display: flex;
@@ -36,6 +43,13 @@ header {
       color: #fff;
       text-decoration: none;
       padding: 0 15px;
+      transition: 0.3s;
+      @media screen and (min-width:1824px){
+        font-size: 24px;
+      }
+    }
+    a:hover {
+      color: $red;
     }
   }
 }
