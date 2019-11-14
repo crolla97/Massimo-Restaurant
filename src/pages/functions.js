@@ -88,7 +88,7 @@ const FunctionsPage = (props) => {
               {errors.Message && <p>This is required</p>}
             </label>
             <button type="submit">SEND MESSAGE</button>
-          </formname="contact">
+          </form>
         </section>
       </div>
     </Layout>
