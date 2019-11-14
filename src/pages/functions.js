@@ -1,25 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 
-import { graphql } from 'gatsby';
-import useForm from 'react-hook-form';
+import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Form from '../components/form'
 
 const FunctionsPage = (props) => {
-  const [form, changeValue] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  })
-  const { register, handleSubmit, reset, errors } = useForm();
-  const onSubmit = (data, e) => {
-    if (errors !== undefined) {
-      alert('Success');
-      e.target.reset();
-    }
-  };
   
   return (
     <Layout>
@@ -42,53 +29,8 @@ const FunctionsPage = (props) => {
         </section>
         <section className="form">
           <span>Call or fill out our enquiry form</span>
-          <span>0141 942 3111</span>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
-            <label>
-              Your Name
-              <input
-                type="text"
-                name="Name"
-                ref={register({required: true, maxLength: 80})}
-              />
-              {errors.Name && <p>This is required</p>}
-            </label>
-            <label>
-              Your Email
-              <input
-                type="text"
-                name="Email"
-                ref={register({required: true, pattern: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i})}
-              />
-              {errors.Email && <p>Invalid Email</p>}
-            </label>
-            <label>
-              Phone
-              <input
-                type="tel" 
-                name="Mobile"
-                ref={register({required: true, minLength: 6, maxLength: 12})}
-              />
-              {errors.Mobile && <p>This is required</p>}
-            </label>
-            <label>
-              Message
-              <textarea
-                name="Message"
-                ref={register({required: true})}
-              />
-              {errors.Message && <p>This is required</p>}
-            </label>
-            <button type="submit">SEND MESSAGE</button>
-          </form>
+          <span className="number">0141 942 3111</span>
+          <Form />
         </section>
       </div>
     </Layout>

@@ -89,11 +89,6 @@ form {
       border-image: none;
       font-size: $ms-size;
     }
-    p {
-      color: $red;
-      // padding: 10px 0;
-      font-size: $mm-size;
-    }
     textarea {
       border-image: none;
       font-size: $m-size;
@@ -138,6 +133,9 @@ form {
   }
   span {
     font-size: 22px;
+    @media screen and (min-width: 1024px) {
+      font-size: 28px;
+    }
   }
 }
 
