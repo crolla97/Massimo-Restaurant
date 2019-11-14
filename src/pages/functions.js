@@ -43,8 +43,15 @@ const FunctionsPage = (props) => {
         <section className="form">
           <span>Call or fill out our enquiry form</span>
           <span>0141 942 3111</span>
-          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit(onSubmit)}>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <label>
               Your Name
               <input
@@ -81,7 +88,7 @@ const FunctionsPage = (props) => {
               {errors.Message && <p>This is required</p>}
             </label>
             <button type="submit">SEND MESSAGE</button>
-          </form>
+          </formname="contact">
         </section>
       </div>
     </Layout>
