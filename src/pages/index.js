@@ -82,7 +82,7 @@ const IndexPage = (props) => (
       <div className="card card-main card-main4">
         <h1>Where to find us</h1>
         <p>3/5 Kirk Rd, Bearsden, Glasgow G61 3RG</p>
-        <a href="https://goo.gl/maps/B5HvLfKgKM2wkpmm7" rel="noopener noreferrer">GET DIRECTIONS</a>
+        <a href="https://goo.gl/maps/v5th8SMUjgsktDCk9" rel="noopener noreferrer">GET DIRECTIONS</a>
       </div>
       <div className="card card-img">
         {typeof window !== 'undefined' &&
