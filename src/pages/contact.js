@@ -10,22 +10,20 @@ const ContactPage = () => (
     <div className="contactContainer">
       <section>
         <h1>Contact Us</h1>
-        <span>0141 942 311</span>
+        <span>0141 942 3111</span>
         <span>bearsden@massimo-restaurants.com</span>
         <h1>Address</h1>
-        <span>3/5 Kirk Rd, Bearsden, Glasgow</span>
+        <span>3/5 Kirk Rd, Bearsden, G61 3RG</span>
         <span>Short stay car park at the end of Kirk Road</span>
         <h1>Opening Times</h1>
         <div className="table">
           <ul>
-            <li>Mon-Thur</li>
-            <li>Fri-Sat</li>
+            <li>Mon-Sat</li>
             <li>Sun</li>
           </ul>
           <ul>
-            <li>12:00-23:00</li>
-            <li>11:00-00:00</li>
-            <li>12:00-22:00</li>
+            <li>10:30-00:00</li>
+            <li>16:30-22:00</li>
           </ul>
         </div>
       </section>

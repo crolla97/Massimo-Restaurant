@@ -42,35 +42,35 @@ const Form = () => {
       <input type="hidden" name="form-name" value="contact" />
       <p hidden>
         <label>
-          Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+          Don’t fill this out: <input name="bot-field" onChange={handleChange} required/>
         </label>
       </p>
       <p>
         <label>
           Your name:
           <br />
-          <input type="text" name="name" onChange={handleChange} />
+          <input type="text" name="name" onChange={handleChange} required/>
         </label>
       </p>
       <p>
         <label>
           Your email:
           <br />
-          <input type="email" name="email" onChange={handleChange} />
+          <input type="email" name="email" onChange={handleChange} required/>
         </label>
       </p>
       <p>
         <label>
           Phone Number:
           <br />
-          <input type="tel" name="phone" onChange={handleChange} />
+          <input type="tel" name="phone" onChange={handleChange} required/>
         </label>
       </p>
       <p>
         <label>
           Message:
           <br />
-          <textarea name="message" onChange={handleChange} />
+          <textarea name="message" onChange={handleChange} required/>
         </label>
       </p>
       <p>

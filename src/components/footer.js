@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="find">
           <h3>Find Us</h3>
-          <span>5 Kirk Rd, Bearsden, Glasgow</span>
+          <span>5 Kirk Rd, Bearsden, G61 3RG</span>
         </div>
         <div className="openHours">
           <h3>Opening Times</h3>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className="contact">
           <h3>Contact Us</h3>
-          <span>0141 942 311</span>
+          <span>0141 942 3111</span>
           <span>bearsden@massimo-restaurants.com</span>
         </div>
       </div>
