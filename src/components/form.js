@@ -42,7 +42,7 @@ const Form = () => {
       <input type="hidden" name="form-name" value="contact" />
       <p hidden>
         <label>
-          Don’t fill this out: <input name="bot-field" onChange={handleChange} required/>
+          Don’t fill this out: <input name="bot-field" onChange={handleChange}/>
         </label>
       </p>
       <p>
