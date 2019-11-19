@@ -57,7 +57,22 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     wine: file(relativePath: { eq: "images/wine-bottles.JPG" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          base64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+          presentationWidth
+          presentationHeight
+        }
+      }
     }
     mainMenu: file(name: { eq: "Main-Menu" }) {
       publicURL
