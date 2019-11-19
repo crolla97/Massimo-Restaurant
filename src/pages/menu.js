@@ -19,20 +19,19 @@ const MenuPage = (props) => {
           <div className="card card-main card-main1">
             <h1>Food</h1>
             <p>We are able to cater and adapt to any intolerances and dietary requirements</p>
-            <a href="#">Main Menu</a>
-            <a href="#">Lunch Menu</a>
-            <a href="#">Takeaway Menu</a>
+            <a href={props.data.mainMenu.publicURL} rel="noopener noreferrer" target="_blank">À La Carte</a>
+            <a href={props.data.lunchMenu.publicURL} rel="noopener noreferrer" target="_blank">Lunch</a>
+            <a href={props.data.takeawayMenu.publicURL} rel="noopener noreferrer" target="_blank">Takeaway</a>
           </div>
-          <Img fluid={props.data.dinner.childImageSharp.fluid} />
+          <Img fluid={props.data.pasta.childImageSharp.fluid} />
         </section>
         <section className="menu">
           <div className="card card-main card-main2">
             <h1>Bar</h1>
             <p>Whet your whistle from the lists below</p>
-            <a href="#">Bar Menu</a>
-            <a href="#">Cocktail Menu</a>
+            <a href={props.data.wineMenu.publicURL} rel="noopener noreferrer" target="_blank">Wine Menu</a>
           </div>
-          <Img fluid={props.data.dinner.childImageSharp.fluid} />
+          <Img fluid={props.data.wine.childImageSharp.fluid} />
         </section>
       </div>
     </Layout>
@@ -54,8 +53,23 @@ export const pageQuery = graphql`
     pizzaOven: file(relativePath: { eq: "images/massimo-pizza.jpg" }) {
       ...fluidImage
     }
-    dinner: file(relativePath: { eq: "images/pasta-pizza.jpg" }) {
+    pasta: file(relativePath: { eq: "images/massimo-pasta.JPG" }) {
       ...fluidImage
+    }
+    wine: file(relativePath: { eq: "images/wine-bottles.JPG" }) {
+      ...fluidImage
+    }
+    mainMenu: file(name: { eq: "Main-Menu" }) {
+      publicURL
+    }
+    lunchMenu: file(name: { eq: "Lunch-Menu" }) {
+      publicURL
+    }
+    takeawayMenu: file(name: { eq: "Take-Out" }) {
+      publicURL
+    }
+    wineMenu: file(name: { eq: "Wine-Menu" }) {
+      publicURL
     }
   }
 `;

@@ -10,6 +10,9 @@ import SEO from "../components/seo"
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
+    <div className="background">
+      <Img fluid={props.data.background.childImageSharp.fluid}/>
+    </div>
     <div className="landing landing-home">
       <div className="landingPic">
         <Img fluid={props.data.landing.childImageSharp.fluid} />
@@ -75,7 +78,7 @@ const IndexPage = (props) => (
         <Link to="/menu">MENU</Link>
       </div>
       <div className="card card-img">
-        <Img fluid={props.data.wine.childImageSharp.fluid} />
+        <Img fluid={props.data.beer.childImageSharp.fluid} />
       </div>
     </section>
     <section className="home home-4"> 
@@ -121,10 +124,13 @@ export const pageQuery = graphql`
     outside: file(relativePath: { eq: "images/outside.jpg" }) {
       ...fluidImage
     }
-    wine: file(relativePath: { eq: "images/wine-bottles.jpg" }) {
+    beer: file(relativePath: { eq: "images/beer-tap.jpg" }) {
       ...fluidImage
     }
     map: file(relativePath: { eq: "images/map.png" }) {
+      ...fluidImage
+    }
+    background: file(relativePath: { eq: "images/background-zoom.jpg" }) {
       ...fluidImage
     }
   }

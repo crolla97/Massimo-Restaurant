@@ -12,7 +12,7 @@ const Header = ({ parentCallback }) => {
       <Link to="/"><Logo /></Link>
       <nav className="header-nav">
         <span><Link to="/">Home</Link></span>
-        <span><Link to="/menu">Menus</Link></span>
+        <span><Link to="/menu">Food & Drink</Link></span>
         <span><Link to="/functions">Functions</Link></span>
         <span><Link to="/contact">Contact</Link></span>
       </nav>

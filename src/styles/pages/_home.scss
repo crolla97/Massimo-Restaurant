@@ -1,3 +1,19 @@
+main {
+  position: relative;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  .gatsby-image-wrapper {
+    object-fit: cover;
+    // object-position: center center;
+    height: 100vh;
+  }
+}
+
 .landing-home {
   height: 100vh;
   display: block;
@@ -6,8 +22,6 @@
 
   .landingPic {
     .gatsby-image-wrapper {
-      object-fit: cover;
-      object-position: center center;
       height: 100vh;
     }
   }
@@ -85,7 +99,7 @@
   display: flex;
   flex-direction: column;
   height: unset;
-  background-color: $grey;
+  background-color: transparent;
 
   .card {
     width: 100%;
@@ -141,6 +155,30 @@
       font-size: $ms-size;
     }
   }
+  .card-main {
+    background-color: rgba(231, 234, 236, 0.92);
+    a {
+      background-color: rgb(231, 234, 236);
+    }
+  }
+  // .card-main2 {
+  //   background-color: rgba(182, 155, 105, 0.92);
+  //   a {
+  //     background-color: rgb(182, 155, 105);
+  //   }
+  // }
+  // .card-main3 {
+  //   background-color: rgba(219, 201, 100, 0.92);
+  //   a {
+  //     background-color: rgb(219, 201, 100);
+  //   }
+  // }
+  // .card-main4 {
+  //   background-color: rgba(231, 234, 236, 0.92);
+  //   a {
+  //     background-color: rgb(231, 234, 236);
+  //   }
+  // }
 }
 
 .home-2 {
@@ -215,8 +253,7 @@
   .landing-home {
 
     .logoOverlay {
-      height: 143.91px;
-      width: 316px;
+      width: 400px;
     }
   }
   .intro {
@@ -228,7 +265,6 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    align-items: center;
     overflow: hidden;
     max-height: 750px;
 
@@ -236,6 +272,9 @@
       width: 50%;
     }
     .card-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 0;
       a {
         color: black;
