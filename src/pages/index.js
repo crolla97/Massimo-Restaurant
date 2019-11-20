@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 
 const IndexPage = (props) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Massimo Restaurant | Function Hire Glasgow" />
     <div className="background">
       <Img fluid={props.data.background.childImageSharp.fluid}/>
     </div>
@@ -31,7 +31,7 @@ const IndexPage = (props) => (
       <h1>EXPERIENCE</h1>
       <div className="text-block">
         <p>
-        Nestled in the heart of Bearsden, Massimo is a family friendly restaurant and   has been an integral part of the community since its doors opened in 2001.
+        Nestled in the heart of Bearsden, Massimo is a family friendly restaurant and   has been an integral part of the community since its doors opened in 2004.
         </p>
       </div>
     </div>
@@ -41,7 +41,7 @@ const IndexPage = (props) => (
         <div className="text-block">
           <p>Our dishes follow a modern Italian cuisine, with traditional values towards fresh ingredients and preparation. Dining with us should be a relaxed and enjoyable experience, with each meal prepared freshly and to your taste</p>
         </div>
-        <Link to="/menu">MENU</Link>
+        <Link to="/menus">MENU</Link>
       </div>
       <div className="card card-img">
         <Img fluid={props.data.pizza.childImageSharp.fluid} />
@@ -51,7 +51,7 @@ const IndexPage = (props) => (
       <div className="card card-main card-main2">
         <h1>Private Dining<br/>& Functions</h1>
         <div className="text-block">
-          <p>Leave it to us to be the host for your event. With a large dining area we can accomidate up to 100 people</p>
+          <p>Leave it to us to be the host for your event. With a large dining area we can accomidate for large events</p>
         </div>
         <Link to="/functions">VIEW MORE</Link>
       </div>
@@ -73,9 +73,9 @@ const IndexPage = (props) => (
       <div className="card card-main card-main3">
         <h1>Bar</h1>
         <div className="text-block">
-          <p>From Italian Beers on tap to Scottish Whiskeys we're sure there is something to take to your liking. Take a seat and enjoy a light bite or settle in for the night</p>
+          <p>From Italian Beers on tap to Scottish Whiskies we're sure there is something to take to your liking. Take a seat and enjoy a light bite or settle in for the night</p>
         </div>
-        <Link to="/menu">MENU</Link>
+        <Link to="/menus">MENU</Link>
       </div>
       <div className="card card-img">
         <Img fluid={props.data.beer.childImageSharp.fluid} />

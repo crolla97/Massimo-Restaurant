@@ -1,7 +1,7 @@
 header {
   height: 70px;
   width: 100vw;
-  background-color: none;
+  background-color: $blue;
   position: fixed;
   display: flex;
   align-items: center;
@@ -67,7 +67,6 @@ header {
       position: relative;
       overflow: hidden;
       font-size: 22px;
-      font-weight: 700;
       @media screen and (min-width:1824px){
         letter-spacing: 0.02rem;
         font-size: 26px;
@@ -80,12 +79,12 @@ header {
       left: 0;
       width: 100%;
       background: #fff;
-      height: 2px;
-      transform: translateX(-101%);
-      transition: transform .5s ease;
+      height: 1px;
+      opacity: 0;
+      transition: opacity .5s ease;
     }
     a:hover:before {
-      transform: translateX(0);
+      opacity: 1;
     }
   }
 }

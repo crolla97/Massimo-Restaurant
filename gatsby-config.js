@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Massimo Restaurnt Bearsden`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Massimo Italian Restaurnt Bearsden`,
+    description: `Italian restaurant in the heart of Bearsden. Massimo is a perfect function venue suitable for all occasionsin the North of Glasgow`,
+    author: `@crollacreations`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,13 +11,6 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
       },
     },
     {

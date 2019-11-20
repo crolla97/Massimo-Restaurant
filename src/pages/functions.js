@@ -10,7 +10,7 @@ const FunctionsPage = (props) => {
   
   return (
     <Layout>
-      <SEO title="Functions" />
+      <SEO title="Function Venue Glasgow" />
       <div className="landing landing-functions">
         <Img fluid={props.data.landing.childImageSharp.fluid} />
         <div className="imageOverlay"></div>
@@ -19,7 +19,7 @@ const FunctionsPage = (props) => {
       <div className="functionsContainer">
         <section className="functions">
           <div className="card card-main card-main1">
-            <h1>Functions at Massimos</h1>
+            <h1>Functions at Massimo</h1>
             <p>Celebrate those important milestones and occasions in our restaurant. Christenings, Private Parties, Engagements, Baby Showers and much more, we host and can arrange a bespoke function or celebration that will be truly memorable.</p>
             <span>ENQUIRE BELOW</span>
           </div>

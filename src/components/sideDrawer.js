@@ -14,7 +14,7 @@ const SideDrawer = ({ menuOpen }) => {
         <li><Link to="/contact">Contact</Link></li>
       </ul>
       <div>
-        <span>5 Kirk Rd, Bearsden, Glasgow</span>
+        <span>5 Kirk Rd, Bearsden, G61 3RG</span>
         <span>0141 942 311</span>
       </div>
     </div>

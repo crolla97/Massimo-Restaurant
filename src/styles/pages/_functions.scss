@@ -90,10 +90,12 @@ form {
     font-size: $ml-size;
     input {
       border-image: none;
+      background-color: #f1f1f1;
       font-size: $ms-size;
     }
     textarea {
       border-image: none;
+      background-color: #f1f1f1;
       font-size: $m-size;
     }
   }

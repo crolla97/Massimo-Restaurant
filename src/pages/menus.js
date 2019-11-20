@@ -9,7 +9,7 @@ const MenuPage = (props) => {
   
   return (
     <Layout>
-      <SEO title="Menu" />
+      <SEO title="Menus at Massimo" />
       <div className="landing landing-menu">
         <Img fluid={props.data.pizzaOven.childImageSharp.fluid} />
         <span>FOOD & DRINKS<br/>MENUS</span>

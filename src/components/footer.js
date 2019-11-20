@@ -15,12 +15,14 @@ const Footer = () => {
           <h3>Opening Times</h3>
           <div className="table">
             <ul className="days">
-              <li>Mon-Sat</li>
+              <li>Mon-Thu</li>
+              <li>Fri-Sat</li>
               <li>Sun</li>
             </ul>
             <ul className="hours">
-              <li>10:30-00:00</li>
-              <li>16:30-22:00</li>
+              <li>9:30-00:00</li>
+              <li>9:30-01:00</li>
+              <li>9:30-22:00</li>
             </ul>
           </div>
         </div>
