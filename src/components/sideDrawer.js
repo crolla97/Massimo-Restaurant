@@ -9,7 +9,7 @@ const SideDrawer = ({ menuOpen }) => {
     <div className={menuClass}>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Food & Drinks</Link></li>
+        <li><Link to="/menus">Food & Drinks</Link></li>
         <li><Link to="/functions">Functions</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
