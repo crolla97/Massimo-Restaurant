@@ -31,7 +31,7 @@ const MenuPage = (props) => {
             <p>Whet your whistle from the lists below</p>
             <a href={props.data.wineMenu.publicURL} rel="noopener noreferrer" target="_blank">Wine Menu</a>
           </div>
-          <Img fluid={props.data.wine.childImageSharp.fluid} />
+          <Img fluid={props.data.beer.childImageSharp.fluid} />
         </section>
       </div>
     </Layout>
@@ -56,24 +56,9 @@ export const pageQuery = graphql`
     pasta: file(relativePath: { eq: "images/massimo-pasta.JPG" }) {
       ...fluidImage
     }
-    wine: file(relativePath: { eq: "images/wine-bottles.JPG" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          base64
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-          originalImg
-          originalName
-          presentationWidth
-          presentationHeight
-        }
-      }
-    }
+    beer: file(relativePath: { eq: "images/beer-tap.jpg" }) {
+      ...fluidImage
+    }    
     mainMenu: file(name: { eq: "Main-Menu" }) {
       publicURL
     }

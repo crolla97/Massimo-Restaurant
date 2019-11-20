@@ -36,7 +36,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 60px 40px;
-    background-color: #EFEFEF;
+    background-color: $grey;
     h1 {
       @media screen and (min-width: 1024px) {
         font-size: 44px;
